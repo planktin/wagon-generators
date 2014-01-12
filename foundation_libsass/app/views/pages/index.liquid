@@ -1,19 +1,72 @@
 ---
-title: Home page
+title: Home
+listed: true
 published: true
+cache_strategy: none
+response_type: text/html
+position: 0
 ---
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" >
+<head>
     <meta charset="utf-8">
-    <title>{{ site.name }}</title>
-    <meta name="keywords" value="{{ site.meta_keywords }}" />
-    <meta name="description" value="{{ site.meta_description }}" />
-  </head>
-  <body>
-    <h1>{{ page.title }}</h1>
-    {% block 'main' %}
-    <p>Lorem ipsum....</p>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        {{ site.name }}: {{ page.title }} 
+        | 
+        {% if page.seo_title %}{{ page.seo_title }}{% else %}{{ site.seo_title }}{% endif %}
+    </title>
+
+    <meta name="description" content="{% if page.meta_description %}{{ page.meta_description }}{% else %}{{ site.meta_description }}{% endif %}">
+    <meta name="keywords" content="{{ site.meta_keywords }}, {{ page.meta_keywords }}">
+
+    <link rel="canonical" href="{{ canonical_url }}">
+
+    {{ 'app.css' | stylesheet_tag }}  
+    {{ 'custom.modernizr.js' | javascript_tag }}
+</head>
+<body>
+
+    <header class="row">
+        <div class="small-12 columns">
+            <nav class="top-bar">
+                <ul class="title-area">
+                    <li class="name">
+                        <h1><a href="/"><i class="fi-home"></i> {{ site.name }}</a></h1>
+                    </li>
+                    <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+                </ul>
+
+                <section class="top-bar-section">
+
+                    <!-- main site menu -->
+                    <ul class="left">
+                        <li><a href="#">Item 1</a></li>
+                        <li><a href="#">Item 2</a></li>
+                    </ul>
+                </section>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Content here -->
+    {% block content %}
+    <div class="row">
+        <div class="large-12 columns">
+            <h2>{{ page.title }}</h2>
+            <p>An empty template...</p>
+        </div>
+    </div>
     {% endblock %}
-  </body>
+
+    <!-- Footer here -->
+    {% include 'footer' %}
+
+    <!-- Scripts here -->
+    {{ 'jquery.js' | javascript_tag }}
+    {{ 'foundation.min.js' | javascript_tag }}
+    <script> $(document).foundation(); </script>
+</body>
 </html>

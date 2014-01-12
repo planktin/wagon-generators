@@ -1,0 +1,10 @@
+{
+  "name": "planktin-foundation5-locomotive-template",
+  "private": true,
+  "dependencies": {
+    "foundation": "zurb/bower-foundation",
+    "foundation-icon-fonts": "zurb/foundation-icon-fonts",
+    "font-awesome": "FortAwesome/Font-Awesome"
+  },
+  "devDependencies": {}
+}

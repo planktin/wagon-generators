@@ -1,6 +1,6 @@
 # Wagon Template Generator for LocomotiveCMS
 
-This generator is under development, but will soon feature a basic template for [Foundation 5](http://foundation.zurb.com/).
+This generator is under development, but will soon feature a basic template for [Foundation 5](http://foundation.zurb.com/), powered by Libsass and Grunt.
 
 ## Requirements
 
@@ -18,9 +18,9 @@ wagon list_templates --lib=wagon_generators/foundation.rb
 
 From there you can choose which flavour you'd like to install. 
 
-## Foundation with Bower and Grunt
+## Foundation 5 (Libsass)
 
-If you'd like to install using the latest version of Foundation, upgradeable with Bower, run:
+If you'd like to install using the latest version of Foundation (Foundation 5), upgradeable with Bower, run:
 
 ```bash
 cd ~/wagon_sites
@@ -29,13 +29,19 @@ cd mysite/vendor/foundation-libsass
 npm install && bower install
 ```
 
-This will generate an empty wagon site, grab the latest version of foundation, foundation-icons and font-awesome and put them in /vendors/foundation-libsass/
+This will generate an empty wagon site, grab the latest version of foundation, foundation-icons and font-awesome and put them in the root directory (under bower_components/ and node_modules/)
 
-You can then use grunt to compile your SCSS/SASS into the public directory
+You can then use grunt to compile your SCSS/SASS into the public directory.
 
 ```bash
 cd ~/wagon_sites/mysite/vendor/foundation-libsass
 grunt
 ```
+
+A grunt watch task is set up, so when you want to edit any settings or styles for your app just edit the files in app/assets/scss. Grunt will run some tasks to recompile your CSS into the public folder.
+
+### [Foundation Icons Bug](https://github.com/zurb/foundation-icon-fonts/pull/1)
+
+In your 'browser_components/foundation-icon-fonts/_foundation-icon-fonts.scss' file, remove the fi-path from the "font-family:" declaration.
 
 Please note these templates are still under development and will currently give you an empty wagon site.
