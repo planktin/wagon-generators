@@ -14,8 +14,8 @@ position: 0
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>
-        {{ site.name }}: {{ page.title }} 
-        | 
+        {{ site.name }}: {{ page.title }}
+        |
         {% if page.seo_title %}{{ page.seo_title }}{% else %}{{ site.seo_title }}{% endif %}
     </title>
 
@@ -24,39 +24,20 @@ position: 0
 
     <link rel="canonical" href="{{ canonical_url }}">
 
-    {{ 'app.css' | stylesheet_tag }}  
+    {{ 'app.css' | stylesheet_tag }}
     {{ 'custom.modernizr.js' | javascript_tag }}
 </head>
-<body>
+<body id="{{ page.slug }}">
 
-    <header class="row">
-        <div class="small-12 columns">
-            <nav class="top-bar">
-                <ul class="title-area">
-                    <li class="name">
-                        <h1><a href="/"><i class="fi-home"></i> {{ site.name }}</a></h1>
-                    </li>
-                    <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
-                </ul>
-
-                <section class="top-bar-section">
-
-                    <!-- main site menu -->
-                    <ul class="left">
-                        <li><a href="#">Item 1</a></li>
-                        <li><a href="#">Item 2</a></li>
-                    </ul>
-                </section>
-            </nav>
-        </div>
-    </header>
+    <!-- Header here -->
+    {% include 'header' %}
 
     <!-- Content here -->
-    {% block content %}
+    {% block main %}
     <div class="row">
         <div class="large-12 columns">
             <h2>{{ page.title }}</h2>
-            <p>An empty template...</p>
+            <p>An empty template... We&rsquo;ve got some work to do...</p>
         </div>
     </div>
     {% endblock %}

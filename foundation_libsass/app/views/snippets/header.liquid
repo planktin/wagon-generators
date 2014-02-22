@@ -1,0 +1,20 @@
+<header class="row">
+    <div class="small-12 columns">
+        <nav class="top-bar">
+            <ul class="title-area">
+                <li class="name">
+                    <h1><a href="/"><i class="fi-home"></i> {{ site.name }}</a></h1>
+                </li>
+                <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+            </ul>
+
+            <section class="top-bar-section">
+
+                <!-- main site menu -->
+                <ul class="left">
+                    {% nav 'site', no_wrapper: true, active_class: "active" %}
+                </ul>
+            </section>
+        </nav>
+    </div>
+</header>

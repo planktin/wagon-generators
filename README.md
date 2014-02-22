@@ -64,7 +64,12 @@ to
 
 font-family: "foundation-icons";
 
-and leave the rest of the src declarations as is.
+and leave the rest of the src declarations as is. You may want to run grunt build again after that, or if you're already running grunt watch just re-save the app/scss/_settings.scss file and it will recompile for you.
+
+```bash
+$ cd ~/wagon_sites/mysite
+$ grunt build
+```
 
 ## Roadmap / To Do
 
