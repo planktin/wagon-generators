@@ -1,12 +1,13 @@
-# Wagon Template Generator for LocomotiveCMS
+# Wagon Template Generators
 
-This generator is under development, but will soon feature a basic template for [Foundation 5](http://foundation.zurb.com/), powered by Libsass and Grunt.
+This is a collection of wagon generators for [LocomotiveCMS](http://locomotivecms.com), an open source CMS built on Rails. At the moment there are 2 basic generators which allow you to generate a wagon site with [Foundation 5](http://foundation.zurb.com/). The libsass template is also powered by Bower, Grunt and Libsass.
 
 ## Requirements
 
 You'll need to at least
 
   * [Install Wagon](http://doc.locomotivecms.com/get-started/install-wagon) for LocomotiveCMS.
+  * NodeJS and NPM
 
 ## Quickstart
 
@@ -44,4 +45,6 @@ A grunt watch task is set up, so when you want to edit any settings or styles fo
 
 In your 'browser_components/foundation-icon-fonts/_foundation-icon-fonts.scss' file, remove the fi-path from the "font-family:" declaration.
 
-Please note these templates are still under development and will currently give you an empty wagon site.
+## Roadmap / To Do
+
+ * Add a more 'fleshed out' template including common content types, such as contact forms and blogs.
