@@ -12,6 +12,14 @@ module.exports = function(grunt) {
 
         planktin: planktinConfig,
 
+        clean: {
+            dist: [
+                'public/fonts/*',
+                'public/javascripts/*',
+                'public/stylesheets/*'
+            ]
+        },
+
         copy: {
             dist: {
                 files: [{
@@ -53,7 +61,7 @@ module.exports = function(grunt) {
         sass: {
             options: {
                 includePaths: [
-                    'bower_components/foundation/scss', 
+                    'bower_components/foundation/scss',
                     'bower_components/font-awesome/scss',
                     'bower_components/foundation-icon-fonts',
                     '<%= planktin.assets %>/scss'
@@ -86,6 +94,14 @@ module.exports = function(grunt) {
     });
 
     // Register tasks
-    grunt.registerTask('build', ['sass','copy']);
-    grunt.registerTask('default', ['build','watch']);
+    grunt.registerTask('build', [
+        'clean:dist',
+        'sass',
+        'copy'
+    ]);
+
+    grunt.registerTask('default', [
+        'build',
+        'watch'
+    ]);
 }
