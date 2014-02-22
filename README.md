@@ -72,7 +72,8 @@ and leave the rest of the src declarations as is. Make sure grunt is running, re
 
 ## Customize Your Site
 
-Obviously, the template is pretty bare so get in
+Obviously, the template is pretty bare so get in and start customizing! Update your config/ files and fire up your back end editor (locomotive engine or wagon), or just use your wagon commands.
+
 
 ## Roadmap / To Do
 
