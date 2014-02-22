@@ -26,7 +26,7 @@ If you'd like to install using the latest version of Foundation (Foundation 5), 
 ```bash
 cd ~/wagon_sites
 wagon init mysite -t foundation_libsass --lib=wagon_generators/foundation.rb
-cd mysite
+cd ~/wagon_sites/mysite
 npm install && bower install
 ```
 
@@ -35,7 +35,7 @@ This will generate an empty wagon site, grab the latest version of foundation, f
 You can then use grunt to compile your SCSS/SASS into the public directory.
 
 ```bash
-cd ~/wagon_sites/mysite/vendor/foundation-libsass
+cd ~/wagon_sites/mysite
 grunt
 ```
 
