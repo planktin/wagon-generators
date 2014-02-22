@@ -69,3 +69,4 @@ and leave the rest of the src declarations as is.
 ## Roadmap / To Do
 
  * Add a more 'fleshed out' template including common content types, such as contact forms and blogs.
+ * Add better mobile support 'out of the box'
