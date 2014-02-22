@@ -12,9 +12,9 @@ You'll need to at least
 ## Quickstart
 
 ```bash
-cd path-to-my-wagon-sites-home
-git clone git@github.com:planktin/wagon-generators.git
-wagon list_templates --lib=wagon_generators/foundation.rb
+$ cd path-to-my-wagon-sites-home
+$ git clone git@github.com:planktin/wagon-generators.git
+$ wagon list_templates --lib=wagon_generators/foundation.rb
 ```
 
 From there you can choose which flavour you'd like to install. 
