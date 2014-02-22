@@ -27,6 +27,7 @@ If you'd like to install using the latest version of Foundation (Foundation 5), 
 $ cd ~/wagon_sites
 $ wagon init mysite -t foundation_libsass --lib=wagon_generators/foundation.rb
 $ cd ~/wagon_sites/mysite
+$ bundle init
 $ npm install && bower install
 ```
 
@@ -56,7 +57,9 @@ Then fire up your browser and head to http://0.0.0.0:3333/
 
 ### [Foundation Icons Bug](https://github.com/zurb/foundation-icon-fonts/pull/1)
 
-In your 'browser_components/foundation-icon-fonts/_foundation-icon-fonts.scss' file, remove the fi-path from the "@font-face { font-family: ... }" declaration. I.e. change
+If you're seeing funny symbols in the footer instead of social network icons, you've probably got the foundation icons bug. To fix: 
+
+In your 'browser_components/foundation-icon-fonts/_foundation-icon-fonts.scss' file, remove '#{$fi-path}/' from the "@font-face { font-family: ... }" declaration. I.e. change
 
 font-family: "#{$fi-path}/foundation-icons";
 
@@ -64,12 +67,12 @@ to
 
 font-family: "foundation-icons";
 
-and leave the rest of the src declarations as is. You may want to run grunt build again after that, or if you're already running grunt watch just re-save the app/scss/_settings.scss file and it will recompile for you.
+and leave the rest of the src declarations as is. Make sure grunt is running, re-save the app/scss/_settings.scss file and it will recompile for you. Refresh your browser and you should see your icons.
 
-```bash
-$ cd ~/wagon_sites/mysite
-$ grunt build
-```
+
+## Customize Your Site
+
+Obviously, the template is pretty bare so get in
 
 ## Roadmap / To Do
 
