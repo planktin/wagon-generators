@@ -26,7 +26,7 @@ If you'd like to install using the latest version of Foundation (Foundation 5), 
 ```bash
 cd ~/wagon_sites
 wagon init mysite -t foundation_libsass --lib=wagon_generators/foundation.rb
-cd mysite/vendor/foundation-libsass
+cd mysite
 npm install && bower install
 ```
 
