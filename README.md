@@ -69,6 +69,8 @@ font-family: "foundation-icons";
 
 and leave the rest of the src declarations as is. Make sure grunt is running, re-save the app/scss/_settings.scss file and it will recompile for you. Refresh your browser and you should see your icons.
 
+_NOTE:_ If you're using S3 don't forget to update your CORS policy
+
 
 ## Customize Your Site
 
